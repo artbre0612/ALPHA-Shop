@@ -1,0 +1,39 @@
+.step1 {
+  margin: 35px 15px;
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+}
+
+.card-info {
+  height: 288px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .card-name, .card-number, .card-valid-thru, .CCV {
+    display: flex;
+    flex-direction: column;
+    label {
+      color: #808080;
+    }
+    input {
+      outline: none;
+      border: 1px solid #4A4A4A;
+      border-radius: 5px;
+      height: 40px;
+      width: 60%;
+      margin: 10px 0;
+      padding: 0 10px;
+      caret-color: #4A4A4A;
+    }
+  }
+  .step1-bottom {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 90%;
+    }
+  }
+}
