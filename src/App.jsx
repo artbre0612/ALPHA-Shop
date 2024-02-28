@@ -9,11 +9,11 @@ import { Step3 } from './Components/Step3/Step3'
 export function App() {
   return (
     <main>
-      <ProgressControl/>
       <StepProgress/>
       <Step1/>
       <Step2/>
       <Step3/>
+      <ProgressControl/>
     </main>
   );
 }
