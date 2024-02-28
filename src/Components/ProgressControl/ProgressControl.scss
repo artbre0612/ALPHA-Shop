@@ -1,0 +1,27 @@
+.progress-control {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  .pre-button, .next-button, .order-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .fa-arrow-left {
+    padding-right: 10px; 
+  }
+  .fa-arrow-right {
+    padding-left: 10px;
+  }
+  .next-button {
+    display: none;
+  }
+  .order-button {
+    background-color: #F67599;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 50px;
+  }
+}
