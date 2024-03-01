@@ -1,7 +1,7 @@
 # 🏬Introduction
 This is a React practice from Alpha Camp in Dev C4 (frontend).  
 # version
-Ver.1
+Ver.2
 
 # Installation and Execution
 1. Please ensure that Node.js and npm are well installed in your local environment.
