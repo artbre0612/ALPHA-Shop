@@ -1,14 +1,20 @@
 .app {
-  max-width: 1440px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
 }
 .left {
-  width: 50%;
+  flex: 1;
 }
 
 .right {
-  width: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 main {
   display: flex;
+  gap: 10%;
+  height: 800px;
 }
