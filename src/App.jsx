@@ -7,6 +7,7 @@ import { Step2 } from './Components/Step2/Step2'
 import { Step3 } from './Components/Step3/Step3'
 import { Navbar } from './Components/Navbar/Navbar'
 import { ShoppingCart } from './Components/ShoppingCart/ShoppingCart'
+import { Footer } from './Components/Footer/Footer'
 
 export function App() {
   return (
@@ -25,7 +26,7 @@ export function App() {
           <ShoppingCart/>
         </section>
       </main>
-
+      <Footer/>
     </div>
   );
 }
