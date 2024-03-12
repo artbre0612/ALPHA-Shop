@@ -19,13 +19,14 @@ export function App() {
           <StepProgress/>
           <Step1/>
           <Step2/>
-          <Step3/>
+          {/* <Step3/> */}
           <ProgressControl/>
         </section>
         <section className='right'>
           <ShoppingCart/>
         </section>
       </main>
+      
       <Footer/>
     </div>
   );

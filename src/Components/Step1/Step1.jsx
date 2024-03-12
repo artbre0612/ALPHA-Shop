@@ -3,26 +3,37 @@ import './Step1.scss'
 export function Step1 () {
   return ( 
     <div className="step1">
-      <h3>付款資訊</h3>
-      <div className="card-info">
-        <div className="card-name">
-          <label htmlFor="">持卡人姓名</label>
-          <input type="text" placeholder='John Doe' required/>
+      <h3>寄送地址</h3>
+      <div className="input-section">
+        <div className="input1">
+          <label htmlFor="">稱謂</label><br />
+          <select>
+            <option>先生</option>
+            <option>小姐</option>
+          </select>
         </div>
-        <div className="card-number">
-          <label htmlFor="">卡號</label>
-          <input type="text" placeholder='1111 2222 3333 4444' maxLength={19} required/>
+        <div className="input2">  
+          <label htmlFor="">姓名</label><br />
+          <input type="text" placeholder='請輸入姓名' required/>
         </div>
-        <div className="step1-bottom">
-          <div className="card-valid-thru">
-            <label htmlFor="">有效期限</label>
-            <input type="text" placeholder='MM/YY' maxLength={5} required/>
-          </div>
-          <div className="CCV">
-            <label htmlFor="">CVC / CCV</label>
-            <input type="text" placeholder='123' required/>
-          </div>
-        </div>  
+        <div className="input3">  
+          <label htmlFor="">電話</label><br />
+          <input type="text" placeholder='請輸入行動電話' required/>
+        </div>
+        <div className="input4">  
+          <label htmlFor="">Email</label><br />
+          <input type="email" placeholder='請輸入電子郵件' required/>
+        </div>
+        <div className="input5">  
+          <label htmlFor="">縣市</label><br />
+          <select>
+            <option>請選擇縣市</option>
+          </select>
+        </div>
+        <div className="input6">  
+          <label htmlFor="">地址</label><br />
+          <input type="text" placeholder='請輸入地址' required/>
+        </div>
       </div>
     </div>
    );
