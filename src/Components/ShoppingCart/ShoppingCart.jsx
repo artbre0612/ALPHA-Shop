@@ -11,7 +11,7 @@ export function ShoppingCart () {
       quantity: 1,
     },
     {
-      id: '3',
+      id: '2',
       name: '刷色直筒牛仔褲',
       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXb1fVc0136CREwBKT75-PfgSHoQ-MxrbMVGtVADyR1Qo5JecDrDJqstWPERpgiMAQCiA&usqp=CAU',
       price: 1299,
@@ -25,7 +25,7 @@ export function ShoppingCart () {
       quantity: 1,
     },
     {
-      id: '3',
+      id: '4',
       name: '刷色直筒牛仔褲',
       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXb1fVc0136CREwBKT75-PfgSHoQ-MxrbMVGtVADyR1Qo5JecDrDJqstWPERpgiMAQCiA&usqp=CAU',
       price: 1299,

@@ -1,0 +1,45 @@
+.step2{
+  margin: 35px 15px;
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  .select-section {
+    height: 288px;
+  }
+  .select {
+    width: 80%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #808080;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .radio {
+      display: flex;
+      .text {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-weight: 600;
+        }
+        span {
+          font-size: 0.9rem;
+          padding-top: 5px;
+        }
+      }
+    }
+    p {
+      align-self: self-start;
+    }
+  }
+  
+  #border-bottom {
+    height: 2px;
+    width: 100%;
+    background-color: hsla(0, 0%, 50%, 0.2);
+  }
+} 

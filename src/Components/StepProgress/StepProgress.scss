@@ -23,9 +23,9 @@
     .circle {
       width: 24px;
       height: 24px;
-      border: 1px solid #222831;
+      border: 1px solid hsl(216, 19%, 16%);;
       border-radius: 50%;
-      color: #222831;
+      color: hsl(216, 18%, 16%);
       line-height: 24px;
       font-size: 0.8rem;
       text-align: center;
@@ -33,9 +33,9 @@
        background-color: #222831;
        color: #fafafa;
       }
-      &.done::after {
-        content: "\2714";
-      }
+      // &.done::after {
+      //   content: "\2714";
+      // }
     }
   }
 }

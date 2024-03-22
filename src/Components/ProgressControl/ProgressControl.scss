@@ -16,7 +16,11 @@
     padding-left: 10px;
   }
   .next-button {
-    display: none;
+    display: block;
+    background-color: #F67599;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 50px;
   }
   .order-button {
     background-color: #F67599;
