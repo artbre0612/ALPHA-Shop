@@ -1,8 +1,8 @@
-.progress-control {
+.progressControl {
   margin: 15px;
   display: flex;
   justify-content: space-between;
-  .pre-button, .next-button, .order-button {
+  .preButton, .nextButton, .orderButton {
     background-color: transparent;
     outline: none;
     border: none;
@@ -15,14 +15,14 @@
   .fa-arrow-right {
     padding-left: 10px;
   }
-  .next-button {
+  .nextButton {
     display: block;
     background-color: #F67599;
     color: #fff;
     border-radius: 8px;
     padding: 10px 50px;
   }
-  .order-button {
+  .orderButton {
     background-color: #F67599;
     color: #fff;
     border-radius: 8px;

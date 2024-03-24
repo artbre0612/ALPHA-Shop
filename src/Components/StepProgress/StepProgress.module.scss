@@ -1,4 +1,4 @@
-.step-progress {
+.stepProgress {
   margin: 15px;
   h2 {
     font-size: 2rem;
@@ -6,7 +6,7 @@
     margin-bottom: 30px;
   }
 }
-.step-progress-bar {
+.stepProgressBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@
     background-color: #222831;
   }
   
-  .step-progress-bar-item {
+  .stepProgressBarItem {
     display: flex;
     align-items: center;
     gap: 0px 10px;
@@ -33,9 +33,6 @@
        background-color: #222831;
        color: #fafafa;
       }
-      // &.done::after {
-      //   content: "\2714";
-      // }
     }
   }
 }

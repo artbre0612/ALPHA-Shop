@@ -7,12 +7,12 @@
   }
 }
 
-.card-info {
+.cardInfo {
   height: 288px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  .card-name, .card-number, .card-valid-thru, .CCV {
+  .cardName, .cardNumber, .cardValidThru, .CCV {
     display: flex;
     flex-direction: column;
     label {
@@ -30,7 +30,7 @@
       font-size: 0.9rem;
     }
   }
-  .step1-bottom {
+  .step1Bottom {
     display: flex;
     justify-content: space-between;
     input {

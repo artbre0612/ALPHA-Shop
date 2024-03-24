@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import "./ShoppingCart.scss";
+import ShoppingCartScss from "./ShoppingCart.module.scss";
 
 export function ShoppingCart() {
   const shopList = [
@@ -48,39 +48,47 @@ export function ShoppingCart() {
 
   return (
     <>
-      <div className="Shopping-cart">
+      <div className={ShoppingCartScss.ShoppingCart}>
         <h4>購物籃</h4>
         {shopList.map((item) => (
-          <div key={item.id} className="shop-list-item">
-            <img className="item-img" src={item.img} alt={item.name} />
-            <div className="item-info">
-              <p className="item-name">{item.name}</p>
-              <div className="amount-control-panel">
+          <div key={item.id} className={ShoppingCartScss.shopListItem}>
+            <img
+              className={ShoppingCartScss.itemImg}
+              src={item.img}
+              alt={item.name}
+            />
+            <div className={ShoppingCartScss.itemInfo}>
+              <p className={ShoppingCartScss.itemName}>{item.name}</p>
+              <div className={ShoppingCartScss.amountControlPanel}>
                 <button
-                  className="minus"
+                  className={ShoppingCartScss.minus}
                   onClick={() => handleClick(item, false)}
                 >
                   <i className="fa-solid fa-minus"></i>
                 </button>
-                <span className="amount">{quantities[item.id]}</span>
+                <span className={ShoppingCartScss.amount}>
+                  {quantities[item.id]}
+                </span>
                 <button
-                  className="plus"
+                  className={ShoppingCartScss.plus}
                   onClick={() => handleClick(item, true)}
                 >
                   <i className="fa-solid fa-plus"></i>
                 </button>
               </div>
             </div>
-            <p className="price">${item.price * quantities[item.id]}</p>
+            <p className={ShoppingCartScss.price}>
+              ${item.price * quantities[item.id]}
+            </p>
           </div>
         ))}
-        <div className="delivery">
+        <div className={ShoppingCartScss.delivery}>
           <span>運費</span>
-          <span className="delivery-charge">免費</span>
+          <span className={ShoppingCartScss.deliveryCharge}>免費</span>
         </div>
-        <div className="total">
+        <div className={ShoppingCartScss.total}>
           <span>小計</span>
-          <span className="total-price">${price}</span>
+          <span className={ShoppingCartScss.totalPrice}>${price}</span>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-.Shopping-cart {
+.ShoppingCart {
   display: flex;
   flex-direction: column;
   height: 492px;
@@ -11,7 +11,7 @@
   }
 }
 
-.shopping-list {
+.shoppingList {
   overflow-y: scroll;
   &::-webkit-scrollbar {
     width: 8px;
@@ -21,7 +21,7 @@
   }
 }
 
-.shop-list-item {
+.shopListItem {
   display: flex;
   justify-content: space-between;
   margin: 0 5px 20px 0;
@@ -31,9 +31,9 @@
     object-fit: cover;
     
   }
-  .item-info {
+  .itemInfo {
     width: 50%;
-    .item-name {
+    .itemName {
       margin-bottom: 20px;
     }
   }
@@ -42,7 +42,7 @@
   }
 }
 
-.amount-control-panel {
+.amountControlPanel {
   display: flex;
   align-items: center;
   button {
@@ -63,6 +63,6 @@
   margin: 20px 0;
 }
 
-.delivery-charge, .total-price {
+.deliveryCharge, .totalPrice {
   font-weight: 700;
 }
