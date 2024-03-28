@@ -1,25 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import ShoppingCartScss from "./ShoppingCart.module.scss";
+import { ShopListContext } from "../Contexts/CartContext";
 
 export function ShoppingCart() {
-  const shopList = [
-    {
-      id: "0",
-      name: "破壞補丁修身牛仔褲",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQri080seAgVDTO681KouYhdz_iQ74acwNlQw&usqp=CAU",
-      price: 3999,
-      quantity: 1,
-    },
-    {
-      id: "1",
-      name: "刷色直筒牛仔褲",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXb1fVc0136CREwBKT75-PfgSHoQ-MxrbMVGtVADyR1Qo5JecDrDJqstWPERpgiMAQCiA&usqp=CAU",
-      price: 1299,
-      quantity: 1,
-    },
-  ];
+  const { shopList } = useContext(ShopListContext);
 
   const [quantities, setQuantities] = useState(
     shopList.reduce((acc, item) => ({ ...acc, [item.id]: item.quantity }), {})
@@ -50,38 +36,44 @@ export function ShoppingCart() {
     <>
       <div className={ShoppingCartScss.ShoppingCart}>
         <h4>購物籃</h4>
-        {shopList.map((item) => (
-          <div key={item.id} className={ShoppingCartScss.shopListItem}>
-            <img
-              className={ShoppingCartScss.itemImg}
-              src={item.img}
-              alt={item.name}
-            />
-            <div className={ShoppingCartScss.itemInfo}>
-              <p className={ShoppingCartScss.itemName}>{item.name}</p>
-              <div className={ShoppingCartScss.amountControlPanel}>
-                <button
-                  className={ShoppingCartScss.minus}
-                  onClick={() => handleClick(item, false)}
-                >
-                  <i className="fa-solid fa-minus"></i>
-                </button>
-                <span className={ShoppingCartScss.amount}>
-                  {quantities[item.id]}
-                </span>
-                <button
-                  className={ShoppingCartScss.plus}
-                  onClick={() => handleClick(item, true)}
-                >
-                  <i className="fa-solid fa-plus"></i>
-                </button>
-              </div>
-            </div>
-            <p className={ShoppingCartScss.price}>
-              ${item.price * quantities[item.id]}
-            </p>
+        {shopList.length === 0 ? (
+          <div id="noProduct" style={{ height: "240px" }}>
+            尚未加入商品
           </div>
-        ))}
+        ) : (
+          shopList.map((item) => (
+            <div key={item.id} className={ShoppingCartScss.shopListItem}>
+              <img
+                className={ShoppingCartScss.itemImg}
+                src={item.img}
+                alt={item.name}
+              />
+              <div className={ShoppingCartScss.itemInfo}>
+                <p className={ShoppingCartScss.itemName}>{item.name}</p>
+                <div className={ShoppingCartScss.amountControlPanel}>
+                  <button
+                    className={ShoppingCartScss.minus}
+                    onClick={() => handleClick(item, false)}
+                  >
+                    <i className="fa-solid fa-minus"></i>
+                  </button>
+                  <span className={ShoppingCartScss.amount}>
+                    {quantities[item.id]}
+                  </span>
+                  <button
+                    className={ShoppingCartScss.plus}
+                    onClick={() => handleClick(item, true)}
+                  >
+                    <i className="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <p className={ShoppingCartScss.price}>
+                ${item.price * quantities[item.id]}
+              </p>
+            </div>
+          ))
+        )}
         <div className={ShoppingCartScss.delivery}>
           <span>運費</span>
           <span className={ShoppingCartScss.deliveryCharge}>免費</span>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./App.scss";
 import { ProgressControl } from "./Components/ProgressControl/ProgressControl";
 import { StepProgress } from "./Components/StepProgress/StepProgress";
@@ -6,8 +6,10 @@ import { Navbar } from "./Components/Navbar/Navbar";
 import { ShoppingCart } from "./Components/ShoppingCart/ShoppingCart";
 import { Footer } from "./Components/Footer/Footer";
 import { ShowStep } from "./Components/ShowStep/ShowStep";
+import { ShopListContext } from "./Components/Contexts/CartContext";
 
 export function App() {
+  const shopList = useContext(ShopListContext);
   const [step, setStep] = useState(0);
 
   return (
@@ -21,7 +23,9 @@ export function App() {
           <ProgressControl setStep={setStep} step={step} />
         </section>
         <section className="right">
-          <ShoppingCart />
+          <ShopListContext.Provider value={{ shopList }}>
+            <ShoppingCart />
+          </ShopListContext.Provider>
         </section>
       </main>
 
