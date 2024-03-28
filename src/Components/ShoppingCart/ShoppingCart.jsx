@@ -3,15 +3,14 @@
 import { useEffect, useState, useContext } from "react";
 import ShoppingCartScss from "./ShoppingCart.module.scss";
 import { ShopListContext } from "../Contexts/CartContext";
+import { PriceContext } from "../Contexts/PriceProvider";
 
 export function ShoppingCart() {
   const { shopList } = useContext(ShopListContext);
-
+  const { price, setPrice } = useContext(PriceContext);
   const [quantities, setQuantities] = useState(
     shopList.reduce((acc, item) => ({ ...acc, [item.id]: item.quantity }), {})
   );
-
-  const [price, setPrice] = useState(0);
 
   function handlePrice() {
     let ans = 0;
